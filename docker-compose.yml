@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  frontend:
+   build: .
+   image: atulj79/frontend
+   ports: 
+    - 8079
+  
