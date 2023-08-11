@@ -3,9 +3,6 @@ pipeline{
     agent any
 
 // uncomment the following lines by removing /* and */ to enable
-    tools{
-       NodeJS 'NodeJS 4.8.6' 
-    }
     
     stages{
         stage('build'){
@@ -18,7 +15,6 @@ pipeline{
         stage('test'){
             steps{
                 echo 'this is the test job'
-                sh 'npm install'
                 sh 'npm test'
               
             }
@@ -26,7 +22,6 @@ pipeline{
         stage('package'){
             steps{
                 echo 'this is the third job'
-                sh 'npm install'
                 sh 'npm run package'
                 
             }
